@@ -1,0 +1,581 @@
+@font-face {
+    font-family: 'MinhaFontePersonalizada';
+    src: url('fonts/Valorax-lg25V.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #191A19;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+.logo-img {
+    max-width: 150px;
+}
+
+
+/* Menu de Navegação */
+
+.custom-navbar {
+    background-color: #191A19;
+    height:65px;
+}
+
+.nav-button-col {
+    display: flex;          /* Habilita o flexbox */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: flex-end;  /* Alinha os itens à direita */
+    text-align: right;      /* Garante que o texto fique alinhado à direita */
+}
+
+.nav-button-col .sr-only {
+    margin-bottom: 5px; /* Espaço abaixo do texto */
+    display: block; /* Garante que o texto ocupe toda a linha */
+}
+
+.nav-button-col .icon-bar {
+    display: block; /* Faz com que cada barra de ícone fique em uma nova linha */
+    margin: 2px 0; /* Ajusta o espaçamento vertical entre os ícones */
+}
+
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    padding-top: -4px;
+    position: relative;
+    right: -1px;
+    /* vertical-align: middle; */
+    filter: drop-shadow(-10px 0.4px 6px rgba(0, 0, 0, 0.521));
+    z-index: -1;
+
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.nav-link:hover {
+    color: rgb(55, 255, 132) !important;
+}
+
+.wrap {
+    width: 860px;
+    height: 300px;
+    position: relative;
+}
+
+.wrap > .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
+    width: 200%;
+    height: 200%;
+    overflow: hidden; /* evita do video passar a altura desejada do .wrap */
+}
+.wrap > .bg-video > video {
+    width: 100%;
+
+}
+
+/* Estilo para a imagem */
+.wrap .overlay-image {
+    position: absolute;
+    transform: rotateY(180deg);
+    top: 75px;
+    left: 1000px;
+    z-index: 1; /* Acima do vídeo */
+    max-width: 100%; /* Ajusta a imagem para não ultrapassar o contêiner */
+    height: 550px;
+    filter: drop-shadow(5px 5px 10px rgba(7, 17, 4, 0.815));
+}
+
+.playlab-logo {
+    font-size: 10px;
+    width: 400px;
+    position: absolute;
+    bottom: 150px;
+    padding-left: 90px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.815));
+}
+
+.game-name {
+    font-size: 10px;
+    width: 850px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.815));
+}
+
+.p-frase {
+    font-size: 10px;
+    width: 400px;
+    position: absolute;
+    top: 330px;
+    left: 350px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.815));
+}
+
+.play-button {
+    font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #000000;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  overflow: hidden;
+  margin-top: 160px;
+  margin-left: 250px;  
+}
+
+
+.play-button:active {
+    scale: 0.92;
+  }
+  
+  .play-button:hover {
+    background: rgb(2,29,78);
+    background: rgb(55, 255, 132);
+    color: rgb(4, 4, 38);
+  }
+
+  .features-button {
+    font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #000000;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  overflow: hidden;
+}
+
+.features-button:active {
+    scale: 0.92;
+  }
+  
+  .features-button:hover {
+    background: rgb(2,29,78);
+    background: rgb(55, 255, 132);
+    color: rgb(4, 4, 38);
+  }
+
+  .custom-divider {
+    height: 1px; 
+    background-color: #a3a3a3; 
+    margin-top: 284px;
+    width: 100%; 
+    
+}
+
+
+  #world {
+    height: 300px;
+  }
+
+
+  @media (max-width: 768px) {
+    #recipeCarousel  .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    #recipeCarousel   .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+#recipeCarousel .carousel-inner .carousel-item.active,
+#recipeCarousel .carousel-inner .carousel-item-next,
+#recipeCarousel .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+    
+    #recipeCarousel   .carousel-inner .carousel-item-right.active,
+    #recipeCarousel  .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    #recipeCarousel   .carousel-inner .carousel-item-left.active, 
+    #recipeCarousel   .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+#recipeCarousel .carousel-inner .carousel-item-right,
+#recipeCarousel .carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+#recipeCarousel .card {
+    background-color: transparent;
+    border: none;
+}
+
+
+
+#recipeCarousel .carousel-control-prev-icon,
+#recipeCarousel .carousel-control-next-icon {
+    display: none;
+
+}
+
+#recipeCarousel .carousel-control-prev img {
+    position: absolute;
+    right: 200px;
+}
+
+#recipeCarousel .carousel-control-next img {
+    position: absolute;
+    left: 200px;
+    z-index: 10;
+}
+
+#recipeCarousel .carousel-caption {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza completamente */
+    text-align: center; /* Centraliza o conteúdo de texto */
+    width: 80%; /* Ocupa a largura total */
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    position: relative;
+    font-size: 2rem; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-left: 15px; /* Ajuste a distância entre a linha e o texto */
+    margin-top: 50px;
+}
+
+.about-text::before {
+    content: "";
+    position: absolute;
+    left: -15px; /* Posição da linha em relação ao texto */
+    top: 0;
+    bottom: 0;
+    width: 3px; /* Largura da linha */
+    background-color: white; /* Cor da linha, ajuste conforme necessário */
+}
+
+p.shadow-p {
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+ #carouselDemo .carousel-item img {
+    height: 600px;
+    width: auto;
+  }
+
+  .top-right-caption {
+    position: absolute;
+    top: 10px;
+    left: 760px;
+    text-align: center;
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#carouselDemo .carousel-control-prev,
+#carouselDemo .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 80px;
+    border: none;
+}
+
+#carouselDemo .carousel-control-prev {
+    left: 220px;
+    z-index: 10;
+}
+
+#carouselDemo .carousel-control-next {
+    right: 220px;
+    z-index: 10;
+}
+
+/* Aplicar o efeito de brilho somente ao passar o mouse */
+#carouselDemo .carousel-control-prev-icon,
+#carouselDemo .carousel-control-next-icon {
+    width: 80px;
+    height: 40px;
+    transition: filter 0.3s;
+}
+
+#carouselDemo .carousel-control-prev:hover .carousel-control-prev-icon,
+#carouselDemo .carousel-control-next:hover .carousel-control-next-icon {
+    filter: brightness(5);
+}
+
+/* Remover o efeito no estado :focus */
+#carouselDemo .carousel-control-prev:focus .carousel-control-prev-icon,
+#carouselDemo .carousel-control-next:focus .carousel-control-next-icon {
+    filter: none;
+}
+
+#carouselDemo .carousel-indicators {
+    position: absolute;
+    bottom: 40px;
+}
+
+/* Navegação com setas */
+.navigation-arrows {
+    margin-top: 20px;
+}
+
+.navigation-arrows .btn {
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.navigation-arrows .btn:hover {
+    background-color: #495057;
+}
+
+#features {
+    margin-bottom: 0; /* Verifique se há margem inferior */
+}
+
+
+/* FAQ */
+
+.faq-text {
+    position: relative;
+    font-size: 2rem; 
+    left: 90px;
+
+}
+
+.faq-text::before {
+    content: "";
+    position: absolute;
+    left: -15px; /* Posição da linha em relação ao texto */
+    top: 75%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Alinha ao centro */
+    height: 2.4rem; /* Ajuste a altura da linha */
+    width: 3px; /* Largura da linha */
+    background-color: white; /* Cor da linha */
+}
+
+.main-content {
+    padding-top: 0; /* Ajuste conforme necessário */
+    margin-top: -70px; /* Use um valor negativo se necessário */
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.accordion-item {
+    border: 1px solid #101010; /* Define a borda ao redor do item */
+    border-radius: 5px; /* Bordas arredondadas para combinar com o estilo */
+    margin-bottom: 10px; /* Remove margem entre os itens do acordeão */
+    width: 1100px;
+}
+
+.accordion-button {
+    margin-bottom: 0; /* Remova a margem inferior */
+    background: rgb(1,52,7);
+    background: linear-gradient(90deg, rgba(1,52,7,1) 0%, rgba(18,105,18,1) 50%, rgba(18,156,18,1) 100%);
+    border: none; /* Remove borda padrão */
+    color: #fff; /* Cor do texto */
+}
+
+.accordion-button:not(.collapsed) {
+    background: #163020; /* Cor do botão quando expandido */
+    color: #539666; /* Cor do texto quando expandido */
+    box-shadow: inset 0 0px 0 rgb(0 0, 0 / 13%); /* Sombra */
+}
+
+.accordion-body {
+    margin-top: 0; /* Remove a margem entre a pergunta e a resposta */
+    padding: 25px; /* Preenchimento da resposta */
+    background: #b7b7b7; /* Cor de fundo da resposta */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 25px -3px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+
+
+.circle-icon {
+	height: 50px;
+	width: 50px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #131212;
+    border: 5px solid #c3f79b;
+	color: #fff;
+	margin-left: -20px;
+	margin-right: 10px;
+	transform: scale(1.2);
+}
+
+#download .container {
+    background-image: url("imgs/backgroundSection.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.play-now {
+    font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #000000;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 20px;  
+}
+
+
+.play-now:active {
+    scale: 0.92;
+  }
+  
+  .play-now:hover {
+    background: rgb(2,29,78);
+    background: rgb(55, 255, 132);
+    color: rgb(4, 4, 38);
+  }
+
+
+
+/* Créditos */
+
+.end-div {
+    height: 2px; 
+    background-color: #a3a3a3; 
+    margin-top: 50px;
+    width: 100%; 
+    
+}
+
+#credits {
+    
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#credits p {
+    font-size: 16px;
+}
+
+.credit-container {
+    position: relative;
+    top: 20px;
+}
+
+
+
+
+/* Animação de fade in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #343a40;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, opacity 0.3s; /* Adiciona transição */
+    opacity: 0; /* Inicia invisível */
+}
+
+#backToTopBtn.show {
+    display: block;
+    opacity: 1; /* Torna visível */
+}
+
+#backToTopBtn:hover {
+    background-color: #495057;
+}
+
+/* Responsividade Adicional */
+@media (max-width: 768px) {
+    .logo-img {
+      max-width: 120px;
+    }
+  
+    .wrap img, .wrap video {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
