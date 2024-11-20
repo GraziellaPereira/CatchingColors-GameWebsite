@@ -198,6 +198,11 @@ body {
     height: 300px;
   }
 
+  .card-body img {
+    height: 200px;
+  }
+  
+
 
   @media (max-width: 768px) {
     #recipeCarousel  .carousel-inner .carousel-item > div {
@@ -386,6 +391,7 @@ p.shadow-p {
     position: relative;
     font-size: 2rem; 
     left: 90px;
+    
 
 }
 
@@ -403,6 +409,7 @@ p.shadow-p {
 .main-content {
     padding-top: 0; /* Ajuste conforme necessário */
     margin-top: -70px; /* Use um valor negativo se necessário */
+    
 }
 
 .flex-center {
@@ -456,43 +463,96 @@ p.shadow-p {
 }
 
 #download .container {
-    background-image: url("imgs/backgroundSection.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.img-download img {
+    height: 660px;
+}
 
-.play-now {
-    font-size: 1.2rem;
-  padding: 1rem 2.5rem;
-  border: none;
-  outline: none;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  background-color: rgb(14, 14, 26);
-  color: rgb(234, 234, 234);
-  font-weight: 700;
-  transition: 0.6s;
-  box-shadow: 0px 0px 60px #000000;
-  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
-  overflow: hidden;
-  margin-top: 10px;
-  margin-left: 20px;  
+.download-text a {
+    position: relative;
+    bottom: 350px;
+    left: 650px;
+}
+
+.download-text h2 {
+    position: relative;
+    bottom: 600px;
+}
+
+.video-play-button {
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 61%;
+    transform: translateX(-50%) translateY(-50%);
+    box-sizing: content-box;
+    display: block;
+    width: 15px;
+    height: 12px;
+    background: #000000de;
+    border-radius: 50%;
+    padding: 9px 24px 18px 28px;
+}
+.video-play-button:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 75px;
+    height: 75px;
+    background: #171717;
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.video-play-button:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: #25c758;
+    border-radius: 50%;
+    transition: all 200ms;
+    border: 1px solid black;
+
 }
 
 
-.play-now:active {
-    scale: 0.92;
-  }
-  
-  .play-now:hover {
-    background: rgb(2,29,78);
-    background: rgb(55, 255, 132);
-    color: rgb(4, 4, 38);
-  }
+.video-play-button span {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    border-left: 18px solid #0a0909;
+    border-top: 10px solid transparent;
+    border-bottom: 12px solid transparent;
+}
 
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+  
+  
 
 
 /* Créditos */
@@ -510,6 +570,7 @@ p.shadow-p {
     color: #fff;
     padding: 40px 0;
     text-align: center;
+    
 }
 
 #credits p {
@@ -519,6 +580,7 @@ p.shadow-p {
 .credit-container {
     position: relative;
     top: 20px;
+    
 }
 
 
